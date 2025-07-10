@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sohaib Ali | Full-Stack Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background-color: #f8f8f8;
+            color: #1a1a1a;
+        }
+        .font-mono {
+            font-family: 'IBM Plex Mono', monospace;
+        }
+        .nav-link {
+            transition: color 0.3s ease;
+        }
+        .nav-link:hover {
+            color: #0070f3;
+        }
+        .tab-btn.active {
+            color: #0070f3;
+            border-bottom-color: #0070f3;
+            font-weight: 600;
+        }
+        .project-card {
+            background-color: white;
+            border: 1px solid #eaeaea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+        .form-input {
+            background-color: #fafafa;
+            border: 1px solid #eaeaea;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .form-input:focus {
+            outline: none;
+            border-color: #0070f3;
+            box-shadow: 0 0 0 3px rgba(0, 112, 243, 0.2);
+        }
+        .typing-cursor {
+            border-right: 2px solid #0070f3;
+            animation: blink 1s step-end infinite;
+        }
+        @keyframes blink {
+            from, to { border-color: transparent }
+            50% { border-color: #0070f3; }
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 border-b border-gray-200">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="font-bold text-xl">Sohaib Ali</a>
+            <div class="hidden md:flex items-center space-x-8 text-gray-600">
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#contact" class="bg-black text-white font-medium py-2 px-5 rounded-lg hover:bg-gray-800 transition-colors">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container mx-auto px-6">
+
+        <section class="text-left py-24 md:py-40">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">
+                Sohaib Ali is a<br>
+                <span id="role-text" class="text-blue-600"></span><span class="typing-cursor"></span>
+            </h1>
+            <p class="mt-6 max-w-2xl text-lg text-gray-600">
+                A versatile and pragmatic software engineer with a passion for building robust, scalable applications across the full stack. From crafting dynamic frontend experiences to architecting powerful backend systems, I thrive on turning complex ideas into elegant, real-world solutions.
+            </p>
+        </section>
+
+        <section id="skills" class="py-16 md:py-24 border-t border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <div class="md:col-span-1">
+                    <h2 class="text-2xl font-bold mb-2">Technology Stack</h2>
+                    <p class="text-gray-500">My toolbox for building modern web applications.</p>
+                </div>
+                <div class="md:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-8">
+                    <div>
+                        <h3 class="font-semibold mb-3">Languages</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>JavaScript (ES6+)</li>
+                            <li>TypeScript</li>
+                            <li>C#</li>
+                            <li>Python</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3">Frontend</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>Angular</li>
+                            <li>HTML5 & CSS3</li>
+                            <li>REST APIs</li>
+                            <li>NgRx</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3">Backend</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>Node.js & Express</li>
+                            <li>ASP.NET Core</li>
+                            <li>WebSockets</li>
+                            <li>JWT</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3">Databases</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>MongoDB</li>
+                            <li>SQL Server</li>
+                            <li>MySQL</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold mb-3">DevOps & Tools</h3>
+                        <ul class="space-y-2 text-gray-600">
+                            <li>Git</li>
+                            <li>Docker</li>
+                            <li>CI/CD</li>
+                            <li>Agile / Scrum</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="projects" class="py-16 md:py-24 border-t border-gray-200">
+            <h2 class="text-3xl font-bold mb-4">Selected Work</h2>
+            <p class="text-gray-500 mb-8 max-w-2xl">A showcase of my projects, filterable by technology stack. From full-stack applications to specific backend services and interactive experiences.</p>
+            
+            <div class="border-b border-gray-200 mb-8">
+                <nav class="-mb-px flex space-x-8" aria-label="Tabs">
+                    <button class="tab-btn active whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent" data-filter="all">All</button>
+                    <button class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent" data-filter="full-stack">Full-Stack (JS)</button>
+                    <button class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent" data-filter="c#">C# / .NET</button>
+                    <button class="tab-btn whitespace-nowrap py-4 px-1 border-b-2 font-medium text-sm text-gray-500 border-transparent" data-filter="node.js">Node.js</button>
+                </nav>
+            </div>
+
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                </div>
+        </section>
+
+        <section id="experience" class="py-16 md:py-24 border-t border-gray-200">
+             <h2 class="text-3xl font-bold mb-12">Career Experience</h2>
+             <div class="relative max-w-2xl">
+                </div>
+        </section>
+
+        <section id="contact" class="py-16 md:py-24 border-t border-gray-200">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+                <div>
+                    <h2 class="text-3xl font-bold">Let's build something great.</h2>
+                    <p class="mt-4 text-gray-600">Have a project in mind, a question, or just want to connect? I'm always open to discussing new opportunities and collaborations. Send me a message and I'll get back to you shortly.</p>
+                     <p class="mt-6 text-sm text-gray-500">Alternatively, email me directly at<br><a href="mailto:sohaibali9243@gmail.com" class="font-semibold text-blue-600">sohaibali9243@gmail.com</a></p>
+                </div>
+                <div>
+                    <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
+                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+
+                        <div>
+                            <label for="name" class="font-medium text-sm">Full Name</label>
+                            <input type="text" id="name" name="name" required class="form-input w-full mt-2 p-3 rounded-lg text-sm">
+                        </div>
+                        <div>
+                            <label for="email" class="font-medium text-sm">Email Address</label>
+                            <input type="email" id="email" name="email" required class="form-input w-full mt-2 p-3 rounded-lg text-sm">
+                        </div>
+                        <div>
+                            <label for="message" class="font-medium text-sm">Message</label>
+                            <textarea id="message" name="message" rows="5" required class="form-input w-full mt-2 p-3 rounded-lg text-sm"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-black text-white font-semibold py-3 px-6 rounded-lg hover:bg-gray-800 transition-colors">Send Message</button>
+                    </form>
+                    <div id="form-status" class="mt-4 text-center"></div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="text-center py-8 border-t border-gray-200">
+        <p class="text-gray-500 text-sm">&copy; 2025 Sohaib Ali. All rights reserved.</p>
+    </footer>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // --- DATA ---
+        const projectsData = [
+            { title: 'Virtual Hospital System', description: 'Architected a full-stack application with role-based access for secure interactions between admins, physicians, and patients.', tags: ['full-stack', 'angular'], tech: ['Angular', 'Node.js (Backend)', 'SQL'] },
+            { title: 'User Management System', description: 'Engineered a scalable user management platform that served as the parent system for 14 downstream software products.', tags: ['full-stack', 'angular'], tech: ['Angular', 'C#/.NET (Backend)', 'CI/CD'] },
+            { title: 'Virtual Car Simulation (AR)', description: 'Developed an interactive Augmented Reality mobile game in Unity, demonstrating real-world object simulation and physics.', tags: ['c#'], tech: ['C#', 'Unity 3D', 'AR Foundation'] },
+            { title: 'E-learning Platform', description: 'Built the backend API and frontend dashboards to support over 1,000 users, improving engagement and usability.', tags: ['full-stack', 'node.js'], tech: ['Node.js', 'MongoDB', 'Angular'] },
+            { title: 'Health and Data Product', description: 'Performed critical bug fixes and performance optimizations for a healthcare product used by the NHS, focusing on C# backend services.', tags: ['c#'], tech: ['C#/.NET', 'SQL', 'Performance Tuning'] },
+            { title: 'Chat Room App', description: 'Built a real-time chat application from scratch using Node.js and Socket.io to handle live connections and messaging.', tags: ['node.js'], tech: ['Node.js', 'Socket.io', 'JavaScript'] },
+            { title: 'Rental Movies App', description: 'Created a secure movie rental backend with a full suite of CRUD operations and JWT-based user authentication.', tags: ['node.js'], tech: ['Node.js', 'MongoDB', 'JWT', 'Express.js'] },
+            { title: 'Python Web Scraper', description: 'Developed a Python script to automate data extraction from websites, for data analysis purposes.', tags: ['python'], tech: ['Python', 'Beautiful Soup', 'Requests'] },
+            { title: 'Customer Core System', description: 'Developed and maintained core backend modules for a business-critical application, including Invoice and Company management.', tags: ['full-stack', 'node.js'], tech: ['Node.js', 'Angular', 'MongoDB'] }
+        ];
+
+        const experienceData = [
+            { role: 'Software Engineer', company: 'Hiveworx, Islamabad', period: 'Jan 2023 – Sep 2023', details: 'Contributed to full-stack development across multiple projects, utilizing Angular for frontend and both Node.js and C#/.NET for backend services. Focused on API design, database optimization, and system integration.' },
+            { role: 'MEAN Stack Developer', company: 'SH Solutions & AlfaOrigin', period: 'Jun 2022 – Dec 2022', details: 'Built and maintained multiple applications using the MEAN stack (MongoDB, Express.js, Angular, Node.js), delivering key features for e-learning, customer management, and equipment services platforms.' }
+        ];
+
+        // --- DYNAMIC ROLE TEXT ---
+        const roles = ["a Full-Stack Developer.", "a Node.js Specialist.", "an Angular Expert.", "a C# Programmer.", "a Problem Solver."];
+        let roleIndex = 0;
+        let charIndex = 0;
+        const roleTextElement = document.getElementById('role-text');
+
+        function type() {
+            if (charIndex < roles[roleIndex].length) {
+                roleTextElement.textContent += roles[roleIndex].charAt(charIndex);
+                charIndex++;
+                setTimeout(type, 100);
+            } else {
+                setTimeout(erase, 2000);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                roleTextElement.textContent = roles[roleIndex].substring(0, charIndex - 1);
+                charIndex--;
+                setTimeout(erase, 50);
+            } else {
+                roleIndex = (roleIndex + 1) % roles.length;
+                setTimeout(type, 500);
+            }
+        }
+        type();
+
+        // --- PROJECTS ---
+        const projectsGrid = document.getElementById('projects-grid');
+        const tabButtons = document.querySelectorAll('.tab-btn');
+
+        function populateProjects(filter = 'all') {
+            projectsGrid.innerHTML = '';
+            const filteredProjects = filter === 'all'
+                ? projectsData
+                : projectsData.filter(p => p.tags.includes(filter));
+
+            filteredProjects.forEach((project, index) => {
+                const projectCard = document.createElement('div');
+                projectCard.className = 'project-card rounded-lg p-6';
+                
+                const tagsHTML = project.tech.map(tag => `<span class="inline-block bg-gray-100 text-gray-700 text-xs font-medium mr-2 mb-2 px-2.5 py-1 rounded-full">${tag}</span>`).join('');
+
+                projectCard.innerHTML = `
+                    <h3 class="font-bold text-lg mb-2">${project.title}</h3>
+                    <p class="text-gray-600 text-sm mb-4 h-20">${project.description}</p>
+                    <div class="flex flex-wrap pt-4 border-t border-gray-100">${tagsHTML}</div>
+                `;
+                projectsGrid.appendChild(projectCard);
+            });
+        }
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+                populateProjects(button.dataset.filter);
+            });
+        });
+
+        populateProjects();
+
+        // --- EXPERIENCE ---
+        const experienceContainer = document.querySelector('#experience .relative');
+        experienceData.forEach((item, index) => {
+             const experienceItem = document.createElement('div');
+             experienceItem.className = 'pl-10 relative pb-10';
+             if (index < experienceData.length - 1) {
+                 experienceItem.innerHTML += `<div class="absolute left-3 top-3 -ml-px mt-1 w-0.5 h-full bg-gray-200"></div>`;
+             }
+             experienceItem.innerHTML += `
+                <div class="absolute left-0 top-1 w-6 h-6 rounded-full bg-blue-600 flex items-center justify-center">
+                    <div class="w-3 h-3 bg-white rounded-full"></div>
+                </div>
+                <p class="text-sm font-medium text-blue-600">${item.period}</p>
+                <h3 class="font-semibold mt-1">${item.role}</h3>
+                <p class="text-gray-500 text-sm">${item.company}</p>
+                <p class="mt-2 text-gray-600">${item.details}</p>
+             `;
+             experienceContainer.appendChild(experienceItem);
+        });
+
+        // --- CONTACT FORM ---
+        const form = document.getElementById('contact-form');
+        const formStatus = document.getElementById('form-status');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            // Check for placeholder access key
+            const accessKeyInput = form.querySelector('input[name="access_key"]');
+            if (accessKeyInput && accessKeyInput.value === 'YOUR_ACCESS_KEY_HERE') {
+                formStatus.innerHTML = `<p class="text-red-500 text-sm">Please configure the form first. See instructions in the HTML code.</p>`;
+                return;
+            }
+
+            const data = new FormData(form);
+            formStatus.innerHTML = `<p class="text-gray-600">Sending...</p>`;
+            try {
+                const response = await fetch(form.action, {
+                    method: 'POST',
+                    body: data,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    formStatus.innerHTML = `<p class="text-green-600 font-semibold">Thank you! Your message has been sent successfully.</p>`;
+                    form.reset();
+                } else {
+                    const result = await response.json();
+                    formStatus.innerHTML = `<p class="text-red-500">Oops! ${result.message || 'There was a problem submitting your form'}.</p>`;
+                }
+            } catch (error) {
+                 formStatus.innerHTML = `<p class="text-red-500">Oops! There was a problem submitting your form.</p>`;
+            }
+        });
+
+    });
+    </script>
+</body>
+</html>
