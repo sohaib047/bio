@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sohaib Ali | Full-Stack Developer</title>
+    <!-- Chosen Palette: Monochrome & Electric Blue -->
+    <!-- Application Structure Plan: An elegant, single-page portfolio with a minimalist aesthetic and dynamic motion. The structure is designed to showcase versatility: 1) A hero section with a typing/rotating text effect to immediately display multiple skills (Full-Stack, Node.js, C#). 2) An overarching "Developer Philosophy" section. 3) A comprehensive, tabbed project gallery that allows recruiters to filter by technology stack (All, Full-Stack, C#, Python), which is the core interactive element for managing the large amount of information. 4) A unified skills grid. 5) A restyled career timeline. 6) A functional HTML contact form ready to be connected to a free service like Formspree. -->
+    <!-- Visualization & Content Choices: 
+        - Dynamic Title -> Goal: Showcase Versatility -> Viz: JavaScript-powered rotating text. Interaction: Automatic text cycling. Justification: A highly engaging and modern way to communicate a multi-faceted skill set instantly.
+        - Projects -> Goal: Organize & Showcase All Work -> Viz: A tabbed and filtered grid of project cards. Interaction: Clicking tabs re-renders the project grid for a specific technology. Justification: The most effective method to present a large, diverse set of projects without overwhelming the user.
+        - Skills -> Goal: Inform/Organize -> Viz: A clean, categorized grid of text-based skill tags. Justification: Clearly displays the breadth of technologies known without subjective proficiency ratings.
+        - Contact -> Goal: Enable Communication -> Viz: A functional HTML form. Justification: Provides a direct and professional way for recruiters to get in touch, as requested.
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -153,13 +162,15 @@
             </div>
 
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                </div>
+                <!-- Projects populated by JS -->
+            </div>
         </section>
 
         <section id="experience" class="py-16 md:py-24 border-t border-gray-200">
              <h2 class="text-3xl font-bold mb-12">Career Experience</h2>
              <div class="relative max-w-2xl">
-                </div>
+                <!-- Experience populated by JS -->
+             </div>
         </section>
 
         <section id="contact" class="py-16 md:py-24 border-t border-gray-200">
@@ -171,7 +182,13 @@
                 </div>
                 <div>
                     <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-6">
-                        <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                        <!-- 
+                            IMPORTANT: To make this form work, you need a free Access Key from web3forms.com
+                            1. Go to https://web3forms.com
+                            2. Click "Create your Access Key" and enter your email.
+                            3. Copy the key they send you and paste it into the value attribute below.
+                        -->
+                        <input type="hidden" name="access_key" value="ccfa0a67-eb10-46b2-9544-641a8b00aa16">
 
                         <div>
                             <label for="name" class="font-medium text-sm">Full Name</label>
@@ -307,10 +324,9 @@
 
         form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            // Check for placeholder access key
             const accessKeyInput = form.querySelector('input[name="access_key"]');
-            if (accessKeyInput && accessKeyInput.value === 'YOUR_ACCESS_KEY_HERE') {
-                formStatus.innerHTML = `<p class="text-red-500 text-sm">Please configure the form first. See instructions in the HTML code.</p>`;
+            if (accessKeyInput && accessKeyInput.value === 'PASTE_YOUR_WEB3FORMS_ACCESS_KEY_HERE') {
+                formStatus.innerHTML = `<p class="text-red-500 text-sm font-semibold">Error: Please configure the contact form with your Access Key.</p>`;
                 return;
             }
 
