@@ -1,2 +1,2 @@
-# bio
-About myself
+# Portfolio
+A portfolio that describes all of my skills and tech stacks.
